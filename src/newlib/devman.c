@@ -31,6 +31,8 @@ int dm_register( const char *name, void *pdata, const DM_DEVICE *pdev )
   if( name == NULL || *name != '/' || strlen( name ) > DM_MAX_DEV_NAME )
     return DM_ERR_INVALID_NAME;
   
+  if (dm_num_devs > DM_MAX_DEVICES)
+    dm_num_devs = 0;
   // Check if the device is not already registered
   for( i = 0; i < dm_num_devs; i ++ )
     if( !strcasecmp( name, dm_list[ i ].name ) )

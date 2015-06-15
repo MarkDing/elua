@@ -29,8 +29,8 @@ typedef u32 pio_type;
 typedef u32 pio_code;
 #define PLATFORM_IO_PORTS                     16
 #define PLATFORM_IO_PORTS_BITS                4
-#define PLATFORM_IO_PINS                      32
-#define PLATFORM_IO_PINS_BITS                 5
+#define PLATFORM_IO_PINS                      16
+#define PLATFORM_IO_PINS_BITS                 4
 #define PLATFORM_IO_FULL_PORT_BIT             14
 #define PLATFORM_IO_FULL_PORT_MASK            ( 1 << PLATFORM_IO_FULL_PORT_BIT )
 #define PLATFORM_IO_ENCODE( port, pin, full ) ( ( ( port ) << PLATFORM_IO_PINS_BITS ) | ( pin ) | ( ( full ) ? PLATFORM_IO_FULL_PORT_MASK : 0 ) )
