@@ -6,7 +6,6 @@
 *.exe
 *.bin
 *.pyc
-inc/romfiles.h
 *.swp
 .sconf_temp/
 .sconsign.dblite

@@ -1,7 +1,7 @@
 elua on EFM32 STK3700
 ==============================
 
-* Get the source code from github. \
+* Get the source code from github.
   EFM32 supported source code located at https://github.com/MarkDing/elua/tree/efm32. Get source code using git clone command. 
 ```
   $ git clone https://github.com/MarkDing/elua.git
