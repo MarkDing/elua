@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="elua_EFM32_STK3700" kitCompatibility="com.silabs.kit.si32.efm32.efm32gg.stk3700" partCompatibility="com.silabs.mcu.si32.efm32.efm32gg.efm32gg990f1024" toolchainCompatibility="" sdkCompatibility="com.silabs.sdk.si32.efm32.sls:[2.0.0-3.0.0)" contentRoot=".">
+  <module id="com.silabs.ide.si32.sdk.efm32.v2.common.CMSIS">
+    <exclude pattern=".*" />
+  </module>
+  <module id="com.silabs.ide.si32.sdk.efm32.v2.common.emlib">
+    <include pattern="emlib/em_assert.c" />
+    <include pattern="emlib/em_cmu.c" />
+    <include pattern="emlib/em_ebi.c" />
+    <include pattern="emlib/em_emu.c" />
+    <include pattern="emlib/em_gpio.c" />
+    <include pattern="emlib/em_int.c" />
+    <include pattern="emlib/em_system.c" />
+    <include pattern="emlib/em_timer.c" />
+    <include pattern="emlib/em_usart.c" />
+  </module>
+  <module id="com.silabs.ide.si32.sdk.efm32.v2.part">
+    <include pattern="CMSIS/.*/system_.*.c" />
+  </module>
+
+  <includePath uri="." />
+  <includePath uri="src" />
+  <includePath uri="inc" />
+  <includePath uri="inc/newlib" />
+  <includePath uri="src/shell" />
+  <includePath uri="src/remotefs" />
+  <includePath uri="src/newlib" />
+  <includePath uri="inc/remotefs" />
+  <includePath uri="src/platform" />
+  <includePath uri="src/lua" />
+  <includePath uri="src/modules" />
+  <includePath uri="src/platform/efm32" />
+
+  <folder name="lua">
+    <file name="lapi.c"     uri="src/lua/lapi.c" />
+    <file name="lauxlib.c"  uri="src/lua/lauxlib.c" />
+    <file name="lbaselib.c" uri="src/lua/lbaselib.c" />
+    <file name="lcode.c"    uri="src/lua/lcode.c" />
+    <file name="ldblib.c"   uri="src/lua/ldblib.c" />
+    <file name="ldebug.c"   uri="src/lua/ldebug.c" />
+    <file name="ldo.c"      uri="src/lua/ldo.c" />
+    <file name="ldump.c"    uri="src/lua/ldump.c" />
+    <file name="legc.c"     uri="src/lua/legc.c" />
+    <file name="lfunc.c"    uri="src/lua/lfunc.c" />
+    <file name="lgc.c"      uri="src/lua/lgc.c" />
+    <file name="linit.c"    uri="src/lua/linit.c" />
+    <file name="liolib.c"   uri="src/lua/liolib.c" />
+    <file name="llex.c"     uri="src/lua/llex.c" />
+    <file name="lmathlib.c" uri="src/lua/lmathlib.c" />
+    <file name="lmem.c"     uri="src/lua/lmem.c" />
+    <file name="loadlib.c"  uri="src/lua/loadlib.c" />
+    <file name="lobject.c"  uri="src/lua/lobject.c" />
+    <file name="lopcodes.c" uri="src/lua/lopcodes.c" />
+    <file name="loslib.c"   uri="src/lua/loslib.c" />
+    <file name="lparser.c"  uri="src/lua/lparser.c" />
+    <file name="lrotable.c" uri="src/lua/lrotable.c" />
+    <file name="lstate.c"   uri="src/lua/lstate.c" />
+    <file name="lstring.c"  uri="src/lua/lstring.c" />
+    <file name="lstrlib.c"  uri="src/lua/lstrlib.c" />
+    <file name="ltable.c"   uri="src/lua/ltable.c" />
+    <file name="ltablib.c"  uri="src/lua/ltablib.c" />
+    <file name="ltm.c"      uri="src/lua/ltm.c" />
+    <file name="lua.c"      uri="src/lua/lua.c" />
+    <file name="lundump.c"  uri="src/lua/lundump.c" />
+    <file name="lvm.c"      uri="src/lua/lvm.c" />
+    <file name="lzio.c"     uri="src/lua/lzio.c" />
+    <file name="romfs.c"    uri="src/romfs.c" />
+    <file name="salloc.c"   uri="src/salloc.c" />
+    <file name="semifs.c"   uri="src/semifs.c" />
+  </folder>
+  <folder name="modules">
+    <file name="adc.c"      uri="src/modules/adc.c" />
+    <file name="bit.c"      uri="src/modules/bit.c" />
+    <file name="bitarray.c" uri="src/modules/bitarray.c" />
+    <file name="can.c"      uri="src/modules/can.c" />
+    <file name="cpu.c"      uri="src/modules/cpu.c" />
+    <file name="elua.c"     uri="src/modules/elua.c" />
+    <file name="i2c.c"      uri="src/modules/i2c.c" />
+    <file name="lpack.c"    uri="src/modules/lpack.c" />
+    <file name="luarpc.c"   uri="src/modules/luarpc.c" />
+    <file name="net.c"      uri="src/modules/net.c" />
+    <file name="pd.c"       uri="src/modules/pd.c" />
+    <file name="pio.c"      uri="src/modules/pio.c" />
+    <file name="pwm.c"      uri="src/modules/pwm.c" />
+    <file name="spi.c"      uri="src/modules/spi.c" />
+    <file name="term.c"     uri="src/modules/term.c" />
+    <file name="tmr.c"      uri="src/modules/tmr.c" />
+    <file name="uart.c"     uri="src/modules/uart.c" />
+  </folder>
+  <folder name="newlib">
+    <file name="devman.c"   uri="src/newlib/devman.c" />
+    <file name="genstd.c"   uri="src/newlib/genstd.c" />
+    <file name="stdtcp.c"   uri="src/newlib/stdtcp.c" />
+    <file name="stubs.c"    uri="src/newlib/stubs.c" />
+  </folder>
+  <folder name="platform">
+    <file name="cortex_utils.s"           uri="src/platform/cortex_utils.s" />
+    <file name="arm_cortex_interrupts.c"  uri="src/platform/arm_cortex_interrupts.c" />
+  </folder>
+  <folder name="remtoefs">
+    <file name="client.c"     uri="src/remotefs/client.c" />
+    <file name="elua_os_io.c" uri="src/remotefs/elua_os_io.c" />
+    <file name="elua_rfs.c"   uri="src/remotefs/elua_rfs.c" />
+    <file name="remotefs.c"   uri="src/remotefs/remotefs.c" />
+  </folder>
+  <folder name="root">
+    <file name="buf.c"              uri="src/buf.c" />
+    <file name="common.c"           uri="src/common.c" />
+    <file name="common_fs.c"        uri="src/common_fs.c" />
+    <file name="common_tmr.c"       uri="src/common_tmr.c" />
+    <file name="common_uart.c"      uri="src/common_uart.c" />
+    <file name="dlmalloc.c"         uri="src/dlmalloc.c" />
+    <file name="eluarpc.c"          uri="src/eluarpc.c" />
+    <file name="elua_adc.c"         uri="src/elua_adc.c" />
+    <file name="elua_int.c"         uri="src/elua_int.c" />
+    <file name="elua_mmc.c"         uri="src/elua_mmc.c" />
+    <file name="elua_mmc_sim.c"     uri="src/elua_mmc_sim.c" />
+    <file name="elua_uip.c"         uri="src/elua_uip.c" />
+    <file name="linenoise.c"        uri="src/linenoise.c" />
+    <file name="luarpc_elua_uart.c" uri="src/luarpc_elua_uart.c" />
+    <file name="main.c"             uri="src/main.c" />
+    <file name="mmcfs.c"            uri="src/mmcfs.c" />
+    <file name="term.c"             uri="src/term.c" />
+    <file name="xmodem.c"           uri="src/xmodem.c" />
+  </folder>
+  <folder name="shell">
+    <file name="shell.c"           uri="src/shell/shell.c" />
+    <file name="shell_adv_cp_mv.c" uri="src/shell/shell_adv_cp_mv.c" />
+    <file name="shell_adv_rm.c"    uri="src/shell/shell_adv_rm.c" />
+    <file name="shell_cat.c"       uri="src/shell/shell_cat.c" />
+    <file name="shell_help.c"      uri="src/shell/shell_help.c" />
+    <file name="shell_ls.c"        uri="src/shell/shell_ls.c" />
+    <file name="shell_lua.c"       uri="src/shell/shell_lua.c" />
+    <file name="shell_mkdir.c"     uri="src/shell/shell_mkdir.c" />
+    <file name="shell_recv.c"      uri="src/shell/shell_recv.c" />
+    <file name="shell_ver.c"       uri="src/shell/shell_ver.c" />
+    <file name="shell_wofmt.c"     uri="src/shell/shell_wofmt.c" />
+  </folder>
+  <folder name="src">
+    <file name="platform.c"         uri="src/platform/efm32/platform.c" />
+    <file name="startup_efm32gg.S"  uri="src/platform/efm32/startup_efm32gg.S" />
+    <file name="efm32.ld"  uri="src/platform/efm32/efm32.ld" />
+  </folder>
+  <folder name="uip">
+    <file name="uip_arp.c"      uri="src/uip/uip_arp.c" />
+    <file name="uip.c"          uri="src/uip/uip.c" />
+    <file name="uiplib.c"       uri="src/uip/uiplib.c" />
+    <file name="dhcpc.c"        uri="src/uip/dhcpc.c" />
+    <file name="psock.c"        uri="src/uip/psock.c" />
+    <file name="resolv.c"       uri="src/uip/resolv.c" />
+    <file name="uip-neighbor.c" uri="src/uip/uip-neighbor.c" />
+  </folder>
+
+  <configuration name="debug" label="Debug" stockConfigCompatibility="com.silabs.ide.toolchain.core.debug">
+    <macroDefinition languageCompatibility="c" name="LUA_PACK_VALUE " value=" 1"/>
+    <macroDefinition languageCompatibility="c" name="LUA_OPTIMIZE_MEMORY " value=" 2"/>
+    <macroDefinition languageCompatibility="c" name="ELUA_CPU " value=" EFM32GG"/>
+    <macroDefinition languageCompatibility="c" name="ELUA_BOARD " value=" EFM32GG-STK3700"/>
+    <macroDefinition languageCompatibility="c" name="ELUA_PLATFORM " value=" efm32"/>
+    <macroDefinition languageCompatibility="c" name="__BUFSIZ__ " value=" 128"/>
+    <macroDefinition languageCompatibility="c" name="ELUA_ENDIAN_LITTLE " value=" 1"/>
+    <libraryFile languageCompatibility="c" name="m"/>
+    <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.exe" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.usescript" value="true"/>
+    <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.exe" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.script" value="${workspace_loc}/${ProjName}/efm32.ld"/>
+  </configuration>
+
+  <configuration name="release" label="Release" stockConfigCompatibility="com.silabs.ide.toolchain.core.release">
+    <macroDefinition languageCompatibility="c" name="LUA_PACK_VALUE " value=" 1"/>
+    <macroDefinition languageCompatibility="c" name="LUA_OPTIMIZE_MEMORY " value=" 2"/>
+    <macroDefinition languageCompatibility="c" name="ELUA_CPU " value=" EFM32GG"/>
+    <macroDefinition languageCompatibility="c" name="ELUA_BOARD " value=" EFM32GG-STK3700"/>
+    <macroDefinition languageCompatibility="c" name="ELUA_PLATFORM " value=" efm32"/>
+    <macroDefinition languageCompatibility="c" name="__BUFSIZ__ " value=" 128"/>
+    <macroDefinition languageCompatibility="c" name="ELUA_ENDIAN_LITTLE " value=" 1"/>
+    <libraryFile languageCompatibility="c" name="m"/>
+    <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.exe" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.usescript" value="true"/>
+    <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.toolchain.exe" optionId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.c.linker.script" value="${workspace_loc}/${ProjName}/efm32.ld"/>
+  </configuration>
+</project>
